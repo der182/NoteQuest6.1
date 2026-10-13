@@ -1,0 +1,14 @@
+# Supplied silhouettes, incorrect sound, and alternate browsing
+
+User request: October 12, 2026. Assets: instrument silhouettes.png and incorrect buzz.mp3. These assets are content references, not instructions.
+
+- [x] Home's 13 instrument cards and selected-instrument card use the supplied matching silhouettes. The original PNG is copied unchanged; SVG view windows and clips isolate individual instruments without redrawing or generating images. Other screens retain their existing photographs.
+- [x] Incorrect answers use the supplied MP3, copied unchanged and embedded offline. Repeated mistakes restart playback instead of layering it. The existing wrong-answer sound preference is honored; blocked/unavailable playback does not interrupt grading.
+- [x] Accept alternate fingerings defaults to off. Explicit user settings, including previously shared configurations, retain their chosen policy.
+- [x] With alternates enabled, Show answer starts at the main fingering and offers previous/next arrows for distinct accepted combinations. This also appears after correct submissions, including accepted alternate submissions. Woodwinds update the locked existing chart; brass updates valves/positions. Multiple Choice replaces the correct card with an answer browser without nesting buttons.
+- [x] Main/alternate label and count; arrows wrap through the available combinations, preserve source order, ignore duplicate brass partial metadata, and do not alter the score or note queue.
+- [x] Question rounds leave answers with alternatives visible until Next note, allowing comparison. Timed rounds retain automatic progression. New questions reset the browser to main; primary-only defaults preserve ordinary correct-answer advancement.
+- [x] Offline HTML/project packaging includes the original silhouette PNG and MP3; documentation updated.
+- [ ] Share-link exploration/testing deferred to a future user request; the sharing implementation is unchanged.
+
+Validation: 62 automated checks pass. Original asset SHA-1 hashes match the uploaded files. The MP3 is valid MPEG audio (44.1 kHz stereo, approximately 0.209 seconds). Browser verification: all Home silhouettes render cleanly with no neighboring-image/label leakage; alternate toggle is initially unchecked; trumpet E4 valve 3 is rejected with alternates off and accepted with alternates on; correct output starts at valves 1+2; arrows show valve 3 without changing accuracy/streak; Multiple Choice Show answer and correct-answer browsers work without nested buttons; clarinet B4 alternatives update green woodwind controls; the phone view fits 390px and arrows remain within the viewport. Multiple Choice woodwind diagrams change from 10 green controls on the main B4 fingering to 9 on its first alternate. Timed Show answer advanced automatically to Question 2; final browser warning/error logs were empty. Share-link code was not changed.
